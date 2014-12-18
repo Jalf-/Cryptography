@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.Jalfdash.FXMLDocumentController">
+    <children>
+      <TextField fx:id="encryptInput" layoutX="14.0" layoutY="43.0" prefHeight="25.0" prefWidth="295.0" promptText="Enter a message" AnchorPane.leftAnchor="14.0" />
+      <Separator layoutX="320.0" layoutY="27.0" orientation="VERTICAL" prefHeight="190.0" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="18.0" prefHeight="25.0" prefWidth="295.0" text="Encryption">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pInput" layoutX="334.0" layoutY="43.0" prefHeight="25.0" prefWidth="215.0" promptText="p" AnchorPane.topAnchor="43.0" />
+      <Label alignment="CENTER" layoutX="328.0" layoutY="22.0" prefHeight="17.0" prefWidth="295.0" text="Key generation">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="pGenerate" layoutX="558.0" layoutY="43.0" onAction="#pGenerateAction" text="Generate" AnchorPane.topAnchor="43.0" />
+      <TextField fx:id="qInput" layoutX="334.0" layoutY="72.0" prefHeight="25.0" prefWidth="215.0" promptText="q" AnchorPane.topAnchor="72.0" />
+      <Button fx:id="qGenerate" layoutX="558.0" layoutY="72.0" mnemonicParsing="false" onAction="#qGenerateAction" text="Generate" AnchorPane.topAnchor="72.0" />
+      <TextField fx:id="nInput" layoutX="334.0" layoutY="101.0" prefHeight="25.0" prefWidth="215.0" promptText="n" AnchorPane.topAnchor="101.0" />
+      <TextField fx:id="kInput" layoutX="334.0" layoutY="130.0" prefHeight="25.0" prefWidth="215.0" promptText="k" AnchorPane.topAnchor="130.0" />
+      <TextField fx:id="eInput" layoutX="334.0" layoutY="159.0" prefHeight="25.0" prefWidth="215.0" promptText="e" AnchorPane.topAnchor="159.0" />
+      <TextField fx:id="dInput" layoutX="334.0" layoutY="188.0" prefHeight="25.0" prefWidth="215.0" promptText="d" AnchorPane.topAnchor="188.0" />
+      <Button fx:id="nGenerate" layoutX="558.0" layoutY="101.0" mnemonicParsing="false" onAction="#nGenerateAction" text="Generate" />
+      <Button fx:id="kGenerate" layoutX="558.0" layoutY="130.0" mnemonicParsing="false" onAction="#kGenerateAction" text="Generate" />
+      <Button fx:id="eGenerate" layoutX="558.0" layoutY="159.0" mnemonicParsing="false" onAction="#eGenerateAction" text="Generate" />
+      <Button fx:id="dGenerate" layoutX="558.0" layoutY="188.0" mnemonicParsing="false" onAction="#dGenerateAction" text="Generate" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="295.0" text="Decryption">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="decryptInput" layoutX="14.0" layoutY="155.0" prefHeight="25.0" prefWidth="295.0" promptText="Enter an encrypted message" />
+      <Button fx:id="encryptButton" layoutX="134.0" layoutY="72.0" mnemonicParsing="false" onAction="#encryptAction" text="Encrypt" />
+      <Button fx:id="decryptButton" layoutX="134.0" layoutY="184.0" mnemonicParsing="false" onAction="#decryptAction" text="Decrypt" />
+      <TextArea fx:id="console" editable="false" layoutX="12.0" layoutY="217.0" prefHeight="171.0" prefWidth="616.0" promptText="Console" />
+      <TextField fx:id="bitsInput" layoutX="558.0" layoutY="14.0" onInputMethodTextChanged="#dGenerateAction" prefHeight="25.0" prefWidth="65.0" promptText="bits" AnchorPane.topAnchor="14.0" />
+    </children>
+</AnchorPane>
